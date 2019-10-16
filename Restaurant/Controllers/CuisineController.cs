@@ -31,7 +31,14 @@ namespace Restaurant.Controllers
         }
         public ActionResult Details(int id)
         {
-            Cuisine thisCuisine = _db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
+            List<RestaurantV> thisCuisine = new List<RestaurantV>{};
+            foreach(RestaurantV way in _db.Restaurants)
+            {
+                if(id == way.CuisineId)
+                {
+                    thisCuisine.Add(way);
+                }
+            }
             return View(thisCuisine);
         }
         public ActionResult Edit(int id)
