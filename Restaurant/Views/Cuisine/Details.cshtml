@@ -1,9 +1,8 @@
-@*
 @model List<Restaurant.Models.RestaurantV>
 @using Restaurant.Models;
 
 @foreach(var whatever in @Model)
 {
-    <li>@Html.ActionLink($"{whatever.Name}", "Details", "Restaurant", new { id = whatever.RestaurantVId})</li>
+    
+    <li>@Html.ActionLink($"{whatever.Name}", "Details","Restaurant",  new { id = whatever.RestaurantVId}) </li>
 }
-*@

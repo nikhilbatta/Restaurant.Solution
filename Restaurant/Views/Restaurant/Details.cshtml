@@ -1,7 +1,12 @@
-@*
+@{
+  Layout = "_Layout";
+}
 @model Restaurant.Models.RestaurantV
 
 <li>@Model.Name</li>
+<li>@Model.Hours</li>
+<li>@Model.Price</li>
+<li>@Model.Location</li>
 <p>@Html.ActionLink("Add new item", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
-*@
+

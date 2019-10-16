@@ -1,4 +1,6 @@
-@*
+@{
+  Layout = "_Layout";
+}
 @using Restaurant.Models;
 @model List<Restaurant.Models.RestaurantV>;
 
@@ -12,4 +14,4 @@
 {
     <li>@Html.ActionLink($"{restrauntvv.Name}", "Details", new { id = restrauntvv.RestaurantVId}) | @restrauntvv.Cuisine.Name </li>
 }
-*@
+
