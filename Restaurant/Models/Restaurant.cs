@@ -8,7 +8,11 @@ namespace Restaurant.Models
         
         public int RestaurantVId {get;set;}
         public int CuisineId { get; set;}
+        public string Hours { get; set; }
+        public int Price { get; set; }
+        public string Location {get; set;}
         public string Name {get;set;}
+     
         public virtual Cuisine Cuisine {get;set;}
     }
 }
