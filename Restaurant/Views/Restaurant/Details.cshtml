@@ -3,12 +3,22 @@
 }
 @model Restaurant.Models.RestaurantV
 
-<li>@Model.Name</li>
-<li>@Model.Hours</li>
-<li>@Model.Price</li>
-<li>@Model.Location</li>
-<p>@Html.ActionLink("Add new item", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<h1>Restaurant details for @Model.Name</h1>
 
- <li><a href="/Cuisine/Details/@Model.RestaurantVId/deleteconfirmed"> Delete</a>/</li>
+<div class="row">
+  <div class="card w-50">
+  
+    &nbsp
+  </div>
+  <div class="card w-50">
+  
+    <p>Hours: @Model.Hours</p>
+    <p>Cost: @Model.Price</p>
+    <p>Location: @Model.Location</p>
+  </div>
+</div>
+
+
+<p>@Html.ActionLink("Add new restaurant", "Create")</p>
+ <p><a href="/Cuisine/Details/@Model.RestaurantVId/deleteconfirmed"> Delete</a></p>
  <p>@Html.ActionLink("Edit", "Edit", "Restaurant", new {idR = @Model.RestaurantVId})</p>

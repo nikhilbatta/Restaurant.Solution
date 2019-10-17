@@ -5,8 +5,7 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
-    <input type="submit" value="Add new category" />
+    @Html.TextBoxFor(model => model.Name, new {@placeholder="enter cuisine name"})
+    <input class="btn btn-danger" type="submit" value="Add new cuisine" />
 }
-<p>@Html.ActionLink("Show all categories", "Index")</p>
+<p>@Html.ActionLink("Show all cuisines", "Index")</p>

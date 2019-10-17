@@ -5,12 +5,14 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
   font-size: 14px;
+  color: white;
 }
 @media (min-width: 768px) {
   html {
@@ -41,16 +43,43 @@ html {
   min-height: 100%;
 }
 
-body {
+body, #header, .row, .card {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
+  background-image: url("eat.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  text-align: center;
+
 }
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  /* Set the fixed height of the footer here */
+ 
   height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px; 
 }
+h1, a, li, h2, h3, h4, p, div{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+.row{
+  color: white;
+  text-align: center;
+}
+.card{
+  text-align: left;
+}
+ul{
+  list-style-type: none;
+}
+.allOutline{
+  border: 1px solid gray;
+}
+
+

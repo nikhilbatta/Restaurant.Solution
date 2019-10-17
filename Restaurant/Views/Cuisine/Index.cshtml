@@ -7,17 +7,25 @@
 {
     <p>@Html.ActionLink("Add new Cuisine", "Create")</p>
 }
+
 @foreach(Cuisine cuisineV in Model)
 {
-    <p>@Html.ActionLink($"{cuisineV.Name}", "Details", new {id = cuisineV.CuisineId}) </p>
+    <div class="allOutline">
+    <h2>@Html.ActionLink($"{cuisineV.Name} restaurants", "Details", new {id = cuisineV.CuisineId}) </h2>
+    
 @foreach(var item in cuisineV.RestaurantVariable)
    {
-       <p>@item.Name</p>
+      
+       <ul>
+        <li><u>@item.Name</u></li>
+       </ul>
+      
    } 
+   </div>
     
 }
 
-<p>@Html.ActionLink("Add new item", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p>@Html.ActionLink("Add new cuisine", "Create")</p>
+<p>@Html.ActionLink("Add new restaurant", "Create")</p>
 
 

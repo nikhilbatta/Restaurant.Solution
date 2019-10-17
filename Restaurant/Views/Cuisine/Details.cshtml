@@ -1,8 +1,14 @@
+@{
+  Layout = "_Layout";
+}
 @model List<Restaurant.Models.RestaurantV>
 @using Restaurant.Models;
 
+<h1>Here are all the @ViewBag.Name.Name restaurants:</h1>
+
 @foreach(var whatever in @Model)
 {
-   
+   <ul>
     <li>@Html.ActionLink($"{whatever.Name}", "Details","Restaurant",  new { idR = whatever.RestaurantVId}, new { idC = whatever.CuisineId} ) </li>
+    </ul>
 }

@@ -3,23 +3,25 @@
 }
 @model Restaurant.Models.RestaurantV
 
-<h4>Add a new Restaurant</h4>
+<h1>Add a new Restaurant</h1>
 @using (Html.BeginForm())
 {
+  <div class="form-group">
     @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
 
     @Html.LabelFor(model => model.Hours)
-    @Html.TextBoxFor(model => model.Hours)
+    @Html.TextBoxFor(model => model.Hours, new { @class = "form-control" })
 
     @Html.LabelFor(model => model.Price)
-    @Html.TextBoxFor(model => model.Price)
+    @Html.TextBoxFor(model => model.Price, new { @class = "form-control" })
 
     @Html.LabelFor(model => model.Location)
-    @Html.TextBoxFor(model => model.Location)
+    @Html.TextBoxFor(model => model.Location, new { @class = "form-control" })
 
-    @Html.LabelFor(model => model.CuisineId)
+    @Html.LabelFor(model => model.Cuisine)
     @Html.DropDownList("CuisineId")
-    <input type="submit" value="Add new restaurant" />
+    
+  </div>
+  <input class="btn btn-danger"type="submit" value="Add new restaurant" />
 }
-<p>@Html.ActionLink("Home", "Index", "Home")</p>

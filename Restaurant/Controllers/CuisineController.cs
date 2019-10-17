@@ -33,7 +33,7 @@ namespace Restaurant.Controllers
         }
         public ActionResult Details(int id)
         {
-           
+           ViewBag.Name = _db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
             List<RestaurantV> thisCuisine = new List<RestaurantV>{};
             foreach(RestaurantV way in _db.Restaurants)
             {
