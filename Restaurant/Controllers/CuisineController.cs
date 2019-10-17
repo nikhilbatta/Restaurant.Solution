@@ -15,7 +15,8 @@ namespace Restaurant.Controllers
         }
         public ActionResult Index()
         {
-            List<Cuisine> model = _db.Cuisines.ToList();
+            List<Cuisine> model = _db.Cuisines.Include(cuisine => cuisine.RestaurantVariable).ToList();
+            
             return View(model);
         }
         public ActionResult Create()
