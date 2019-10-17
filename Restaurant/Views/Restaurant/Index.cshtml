@@ -12,6 +12,7 @@
 }
 @foreach(RestaurantV restrauntvv in Model)
 {
-    <li>@Html.ActionLink($"{restrauntvv.Name}", "Details", new { id = restrauntvv.RestaurantVId}) | @restrauntvv.Cuisine.Name </li>
+    <li>@Html.ActionLink($"{restrauntvv.Name}", "Details", new { idR = restrauntvv.RestaurantVId}) | @restrauntvv.Cuisine.Name </li>
 }
 
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

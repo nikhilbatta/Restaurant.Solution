@@ -3,6 +3,6 @@
 
 @foreach(var whatever in @Model)
 {
-    
-    <li>@Html.ActionLink($"{whatever.Name}", "Details","Restaurant",  new { id = whatever.RestaurantVId}) </li>
+   
+    <li>@Html.ActionLink($"{whatever.Name}", "Details","Restaurant",  new { idR = whatever.RestaurantVId}, new { idC = whatever.CuisineId} ) </li>
 }

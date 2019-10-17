@@ -3,7 +3,7 @@
 }
 @model Restaurant.Models.RestaurantV
 
-<h4>Add a new Restaurant</h4>
+<h4>Edit a new Restaurant</h4>
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Name)
@@ -20,6 +20,8 @@
 
     @Html.LabelFor(model => model.CuisineId)
     @Html.DropDownList("CuisineId")
-    <input type="submit" value="Add new restaurant" />
+
+    @Html.HiddenFor(model => model.RestaurantVId)
+    <input type="submit" value="Edit restaurant"/>
 }
 <p>@Html.ActionLink("Home", "Index", "Home")</p>

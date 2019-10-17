@@ -3,6 +3,7 @@ using Restaurant.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Restaurant.Controllers
 {
@@ -32,6 +33,7 @@ namespace Restaurant.Controllers
         }
         public ActionResult Details(int id)
         {
+           
             List<RestaurantV> thisCuisine = new List<RestaurantV>{};
             foreach(RestaurantV way in _db.Restaurants)
             {
